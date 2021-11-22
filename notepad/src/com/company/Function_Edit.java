@@ -1,5 +1,8 @@
 package com.company;
 
+import javax.swing.*;
+import java.awt.*;
+
 public class Function_Edit {
     GUI gui;
     String text;
@@ -7,9 +10,10 @@ public class Function_Edit {
     public Function_Edit(GUI gui){
         this.gui = gui;
     }
+
+
+
     public void findAndReplace(){
-        FindAndReplace findAndReplace = new FindAndReplace();
-        findAndReplace.textarea = gui.textArea;
-        findAndReplace.find();
+          FindAndReplaceWindow findAndReplaceWindow = new FindAndReplaceWindow();
     }
 }

@@ -117,6 +117,8 @@ public class GUI implements ActionListener {
 
 
         iFindAndReplace =  new JMenuItem("Find and Replace");
+        iFindAndReplace.addActionListener(this);
+        iFindAndReplace.setActionCommand("Find and Replace");
         menuEdit.add(iFindAndReplace);
 
     }
