@@ -57,7 +57,7 @@ public class FindAndReplaceWindow extends JFrame implements ActionListener {
         return replaceText;
     }
     public void findNext(){
-      
+
     }
     public void replace(){}
     public void  replaceAll(){
