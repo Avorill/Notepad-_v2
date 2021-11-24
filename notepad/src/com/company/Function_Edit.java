@@ -2,11 +2,11 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Function_Edit {
     GUI gui;
-    String text;
-
     public Function_Edit(GUI gui){
         this.gui = gui;
     }
@@ -14,6 +14,8 @@ public class Function_Edit {
 
 
     public void findAndReplace(){
-          FindAndReplaceWindow findAndReplaceWindow = new FindAndReplaceWindow();
+          FindAndReplaceWindow findAndReplaceWindow = new FindAndReplaceWindow(gui);
     }
+
+
 }

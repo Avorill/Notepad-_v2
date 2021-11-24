@@ -10,12 +10,15 @@ import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
     GUI gui;
+
     int caret_end_position,begin_position,begin_position_2,caret_end_position_2;
     String line, line_2;
+    Function_File file;
 
 
     public KeyHandler(GUI gui){
         this.gui = gui;
+        this.file = gui.file;
     }
     @Override
     public void keyTyped(KeyEvent e) {
@@ -24,7 +27,12 @@ public class KeyHandler implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-
+        if(e.isControlDown() && e.getKeyCode() == KeyEvent.VK_S)  {
+            file.save();
+        }
+        if(e.isControlDown() && e.getKeyCode() == KeyEvent.VK_N)  {
+            file.newFile();
+        }
         if (e.isControlDown() && e.getKeyCode() == KeyEvent.VK_D) {
             GetRowNumber();
             try {

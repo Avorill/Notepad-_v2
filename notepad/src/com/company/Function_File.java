@@ -82,7 +82,7 @@ public class Function_File {
         }
     }
     public void newFile() {
-        int a = JOptionPane.showConfirmDialog(gui.window, "Do you wnt to save?");
+        int a = JOptionPane.showConfirmDialog(gui.window, "Do you want to save?", "New file", JOptionPane.INFORMATION_MESSAGE);
         if (a == JOptionPane.YES_OPTION) {
             saveAs();
             gui.textArea.setText("");
