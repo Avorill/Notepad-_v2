@@ -14,11 +14,13 @@ public class KeyHandler implements KeyListener {
     int caret_end_position,begin_position,begin_position_2,caret_end_position_2;
     String line, line_2;
     Function_File file;
+    Function_Edit edit;
 
 
     public KeyHandler(GUI gui){
         this.gui = gui;
         this.file = gui.file;
+        this.edit = gui.edit;
     }
     @Override
     public void keyTyped(KeyEvent e) {
@@ -29,6 +31,9 @@ public class KeyHandler implements KeyListener {
     public void keyPressed(KeyEvent e) {
         if(e.isControlDown() && e.getKeyCode() == KeyEvent.VK_S)  {
             file.save();
+        }
+        if(e.isControlDown() && e.getKeyCode() == KeyEvent.VK_F)  {
+           edit.findAndReplace();
         }
         if(e.isControlDown() && e.getKeyCode() == KeyEvent.VK_N)  {
             file.newFile();

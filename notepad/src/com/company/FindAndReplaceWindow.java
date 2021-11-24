@@ -14,8 +14,9 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class FindAndReplaceWindow extends JFrame implements ActionListener {
-    
+
     public static final int OK_OPTION = 0;
     public static final int CANCEL_OPTION = 1;
     public static final int ERROR_OPTION = -1;
